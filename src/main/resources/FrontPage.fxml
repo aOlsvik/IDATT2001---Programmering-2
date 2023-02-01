@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="root" stylesheets="FrontPage.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.idatt2001.alekol.Wargames.Controller.FrontPage">
+   <children>
+      <Label layoutX="311.0" layoutY="39.0" prefHeight="141.0" prefWidth="578.0" styleClass="titleHeader" stylesheets="@FrontPage.css" text="Wargames" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="120.0" />
+         </font>
+      </Label>
+
+      <Label fx:id="aboutGameLabel" layoutX="740.0" layoutY="330.0" styleClass="frontPageLabel" stylesheets="FrontPage.css" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <VBox alignment="CENTER" layoutX="475.0" layoutY="200.0" prefHeight="305.0" prefWidth="250.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToGameScene" prefWidth="250.0" styleClass="comboBox" stylesheets="FrontPage.css" text="Start game">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Separator prefHeight="75.0" prefWidth="100.0" visible="false" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#aboutGame" prefHeight="25.0" prefWidth="250.0" styleClass="comboBox" stylesheets="FrontPage.css" text="About">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Separator layoutX="10.0" layoutY="35.0" prefHeight="75.0" prefWidth="100.0" visible="false" />
+            <Button alignment="CENTER" layoutX="10.0" layoutY="107.0" mnemonicParsing="false" onAction="#quitGame" prefHeight="25.0" prefWidth="250.0" styleClass="comboBox" stylesheets="FrontPage.css" text="Quit">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

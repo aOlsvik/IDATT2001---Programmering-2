@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@BattlePage.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.idatt2001.alekol.Wargames.Controller.BattlePage">
+   <children>
+      <Label layoutX="408.0" layoutY="14.0" styleClass="titleHeader" text="Simulate Battle">
+         <font>
+            <Font size="58.0" />
+         </font></Label>
+      <VBox layoutX="100.0" layoutY="90.0" prefHeight="700.0" prefWidth="1000.0" styleClass="boxBackground">
+         <children>
+            <HBox minHeight="40.0" prefHeight="40.0">
+               <children>
+                  <Button fx:id="startBattleButton" mnemonicParsing="false" onAction="#simulateBattle" prefHeight="40.0" prefWidth="1000.0" stylesheets="@BattlePage.css" text="Start battle">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="pauseBattleButton" disable="true" layoutX="10.0" layoutY="10.0" minHeight="40.0" mnemonicParsing="false" onAction="#pauseBattle" prefWidth="1000.0" stylesheets="@BattlePage.css" text="Pause battle">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="485.0">
+                     <children>
+                        <Label fx:id="labelArmyNameOne">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+                  <Label fx:id="labelVS" text="vs.">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" layoutX="398.0" layoutY="10.0" prefHeight="200.0" prefWidth="485.0">
+                     <children>
+                        <Label fx:id="labelArmyNameTwo" layoutX="96.0" layoutY="5.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0">
+               <children>
+                  <Canvas fx:id="unitCanvas1" height="115.0" width="200.0" />
+                  <Separator orientation="VERTICAL" prefHeight="200.0" prefWidth="600.0" visible="false" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="labelTerrain" text="Terrain name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imageTerrain" fitHeight="90.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+                  <Separator layoutX="210.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="600.0" visible="false" />
+                  <Canvas fx:id="unitCanvas2" height="115.0" width="200.0" />
+               </children>
+            </HBox>
+            <Canvas fx:id="canvasBattle" height="500.0" width="1000.0" />
+         </children>
+      </VBox>
+      <Button layoutX="20.0" layoutY="72.0" minHeight="50.0" minWidth="60.0" mnemonicParsing="false" onAction="#backToSelectArmies" prefHeight="50.0" prefWidth="30.0" rotate="180.0" styleClass="arrowButton" stylesheets="@SelectArmies.css" />
+      <Circle fx:id="circleHelp" fill="DODGERBLUE" layoutX="1125.0" layoutY="97.0" radius="25.0" stroke="#0000003a" strokeType="INSIDE" style="-fx-fill: #7a94d0;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label fx:id="labelHelp" layoutX="200.0" layoutY="5.0" mouseTransparent="true" styleClass="helpLabel" stylesheets="ArmyCreator.css" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="1119.0" layoutY="79.0" mouseTransparent="true" text="?" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

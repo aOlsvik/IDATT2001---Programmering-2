@@ -1,0 +1,87 @@
+.titleHeader{
+    -fx-text-fill: linear-gradient(to top,coral,gold);
+}
+.root{
+    -fx-background-image: url('Images/Backgrounds/startBackground.png');
+    -fx-background-size: 100% 100%;
+}
+.boxBackground{
+    -fx-background-color: rgba(59, 56, 56, 0.96);
+    -fx-text-fill: white;
+}
+
+.button{
+    -fx-cursor: hand;
+    -fx-background-color: #7a94d0;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+.button:hover{
+    -fx-background-color: #a1b5d0 ;
+}
+
+.combo-box{
+    -fx-border-color: white;
+    -fx-background-color: #7a94d0;
+    -fx-border-radius: 100px;
+    -fx-background-radius: 100px;
+    -fx-font-size: 14;
+    -fx-cursor: hand;
+}
+.combo-box .list-cell{
+    -fx-background-color: #7a94d0;
+    -fx-font-size: 14;
+    -fx-background-radius: 100px;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+
+.combo-box-popup .list-view{
+    -fx-background-color: #7a94d0;
+}
+
+.list-view{
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+    -fx-background-color: rgb(59, 56, 56,0.7);
+}
+
+.list-cell:odd{
+    -fx-background-color: rgba(183, 179, 179, 0.5);
+    -fx-text-fill: white;
+}
+.list-cell:even{
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-text-fill: black;
+}
+
+.list-cell:selected:even{
+    -fx-background-color: rgb(255, 255, 255);
+    -fx-text-fill: black;
+}
+
+.list-cell:selected:odd{
+    -fx-background-color: rgb(0, 0, 0);
+    -fx-text-fill: white;
+}
+
+.list-cell:hover:odd{
+    -fx-background-color: rgb(37, 33, 33);
+    -fx-text-fill: white;
+}
+.list-cell:hover:even{
+    -fx-background-color: rgb(37, 33, 33);
+    -fx-text-fill: white;
+}
+
+.combo-box .list-cell:hover{
+    -fx-background-color: #526c93;
+    -fx-background-radius: 0;
+}
+.helpLabel{
+    -fx-border-color: black;
+    -fx-border-width: 0.5;
+    -fx-background-color: #30304b;
+    -fx-text-fill: white;
+}

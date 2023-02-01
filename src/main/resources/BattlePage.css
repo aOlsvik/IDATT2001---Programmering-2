@@ -1,0 +1,21 @@
+.titleHeader{
+    -fx-text-fill: linear-gradient(to top,coral,gold);
+}
+.root{
+    -fx-background-image: url('Images/Backgrounds/startBackground.png');
+    -fx-background-size: 100% 100%;
+}
+.boxBackground{
+    -fx-background-color: rgba(159, 158, 158, 0.75);
+    -fx-text-fill: white;
+}
+
+.button{
+    -fx-cursor: hand;
+    -fx-background-color: #7a94d0;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+.button:hover{
+    -fx-background-color: #a1b5d0 ;
+}

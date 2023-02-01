@@ -1,0 +1,6 @@
+Human army
+
+InfantryUnit,Footman
+RangedUnit,Archer,100
+CavalryUnit,Knight,100
+CommanderUnit,Mountain King,180

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@ArmyCreator.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.idatt2001.alekol.Wargames.Controller.ArmyCreator">
+   <children>
+      <Label layoutX="362.0" layoutY="54.0" styleClass="titleHeader" stylesheets="@ArmyCreator.css" text="Create a new army">
+         <font>
+            <Font size="58.0" />
+         </font></Label>
+      <HBox layoutX="100.0" layoutY="185.0" prefHeight="500.0" prefWidth="1000.0" styleClass="boxBackground" stylesheets="@ArmyCreator.css">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" prefWidth="5.0" visible="false" />
+            <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="167.0">
+               <children>
+                  <Label prefHeight="40.0" text="Add a new army" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldArmyName" focusTraversable="false" prefHeight="26.0" promptText="Army name" />
+                  <Separator prefHeight="10.0" prefWidth="200.0" visible="false" />
+                  <Button mnemonicParsing="false" onAction="#setArmyName" prefHeight="30.0" prefWidth="167.0" text="Register army name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Separator prefHeight="34.0" prefWidth="167.0" visible="false" />
+                  <VBox fx:id="unitBox">
+                     <Label alignment="CENTER" prefHeight="28.0" prefWidth="147.0" text="How many units?" textFill="WHITE">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Label>
+                     <ComboBox fx:id="comboBoxUnitTypes" focusTraversable="false" minWidth="167.0" prefHeight="25.0" promptText="Unit type" />
+                     <Slider fx:id="sliderUnitCount" blockIncrement="1.0" disable="true" focusTraversable="false" majorTickUnit="100.0" max="500.0" minorTickCount="10" prefHeight="33.0" prefWidth="126.0">
+                        <cursor>
+                           <Cursor fx:constant="MOVE" />
+                        </cursor></Slider>
+                     <Label fx:id="labelUnitCount" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="167.0" textFill="WHITE">
+                        <font>
+                           <Font size="22.0" />
+                        </font>
+                     </Label>
+                     <Separator prefHeight="50.0" prefWidth="200.0" visible="false" />
+                     <Button focusTraversable="false" minWidth="167.0" mnemonicParsing="false" onAction="#addUnits" prefHeight="25.0" stylesheets="@ArmyCreator.css" text="Add units">
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <font>
+                           <Font size="18.0" />
+                        </font></Button>
+                  </VBox>
+               </children>
+            </VBox>
+            <Separator layoutX="467.0" layoutY="10.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="50.0" visible="false" />
+            <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="250.0">
+               <children>
+                  <Label fx:id="labelUnitType" prefHeight="40.0" text="Unit Type" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="60.0" prefWidth="250.0" visible="false" />
+                  <ImageView fx:id="imageUnit" fitHeight="300.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+                  <AnchorPane>
+                     <children>
+                        <Label fx:id="labelUnitStats" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children></VBox>
+            <Separator orientation="VERTICAL" prefHeight="500.0" prefWidth="50.0" visible="false" />
+            <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="226.0">
+               <children>
+                  <Label prefHeight="40.0" text="Army Banner" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="60.0" prefWidth="200.0" visible="false" />
+                  <ImageView fx:id="imageBanner" fitHeight="226.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+                  <HBox fx:id="hboxBannerSwitch" alignment="CENTER" prefHeight="48.0" prefWidth="500.0" visible="false">
+                     <children>
+                        <Button minHeight="30.0" minWidth="45.0" mnemonicParsing="false" onAction="#switchBannerLeft" rotate="180.0" styleClass="arrowButton" stylesheets="@SelectArmies.css" />
+                        <Separator layoutX="10.0" layoutY="35.0" prefHeight="1.0" prefWidth="26.0" translateY="260.0" visible="false" />
+                        <Label alignment="CENTER" minWidth="50.0" text="Banner" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Separator layoutX="10.0" layoutY="35.0" prefHeight="1.0" prefWidth="25.0" visible="false" />
+                        <Button minHeight="30.0" minWidth="45.0" mnemonicParsing="false" onAction="#switchBannerRight" styleClass="arrowButton" stylesheets="@SelectArmies.css" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="labelBannerColorInBattle" maxWidth="226.0" prefWidth="226.0" textFill="WHITE" visible="false" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" prefWidth="50.0" visible="false" />
+            <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="195.0">
+               <children>
+                  <Label prefHeight="40.0" text="Your army" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="60.0" prefWidth="200.0" visible="false" />
+                  <ListView fx:id="listViewArmyInfo" focusTraversable="false" prefHeight="165.0" prefWidth="195.0" />
+                  <Button fx:id="buttonClearArmy" disable="true" mnemonicParsing="false" onAction="#clearArmy" prefHeight="25.0" prefWidth="195.0" text="Clear army">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Separator prefHeight="95.0" prefWidth="195.0" visible="false" />
+                  <Button fx:id="buttonCreateArmy" disable="true" mnemonicParsing="false" onAction="#createArmy" prefHeight="25.0" prefWidth="195.0" stylesheets="@ArmyCreator.css" text="Create army">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="labelArmySavedAs" alignment="CENTER" prefHeight="42.0" prefWidth="195.0" text="Army will be saved as:" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="labelFileName" alignment="CENTER" layoutX="10.0" layoutY="383.0" prefHeight="42.0" prefWidth="195.0" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="20.0" layoutY="72.0" minHeight="50.0" minWidth="60.0" mnemonicParsing="false" onAction="#backToSelectArmies" prefHeight="50.0" prefWidth="30.0" rotate="180.0" styleClass="arrowButton" stylesheets="@SelectArmies.css" />
+      <Circle fx:id="circleHelp" fill="DODGERBLUE" layoutX="1125.0" layoutY="97.0" radius="25.0" stroke="#0000003a" strokeType="INSIDE" style="-fx-fill: #7a94d0;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label fx:id="labelHelp" layoutX="250.0" layoutY="40.0" mouseTransparent="true" styleClass="helpLabel" stylesheets="ArmyCreator.css" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="1119.0" layoutY="79.0" mouseTransparent="true" text="?" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

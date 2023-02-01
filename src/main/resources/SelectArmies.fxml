@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="root" stylesheets="@SelectArmies.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.idatt2001.alekol.Wargames.Controller.SelectArmies">
+   <children>
+      <Label alignment="CENTER" layoutX="315.0" layoutY="54.0" styleClass="titleHeader" stylesheets="@SelectArmies.css" text="Select armies to battle" textAlignment="CENTER">
+         <font>
+            <Font size="58.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="100.0" layoutY="185.0" prefHeight="485.0" prefWidth="1000.0" stylesheets="@SelectArmies.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="99.0" minHeight="0.0" prefHeight="77.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="358.66666666666663" minHeight="10.0" prefHeight="163.66666666666666" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="213.0" minHeight="10.0" prefHeight="185.33333333333337" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="181.66666666666669" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox styleClass="boxBackground" stylesheets="@SelectArmies.css">
+               <children>
+                  <ImageView fx:id="imageBannerOne" fitHeight="76.677777777" fitWidth="76.677777777777" pickOnBounds="true" preserveRatio="true" styleClass="image-view" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="500.0" stylesheets="@SelectArmies.css">
+                     <children>
+                        <Label styleClass="titleHeader" stylesheets="@SelectArmies.css" text="Army One">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboBoxArmyOne" prefWidth="150.0" promptText="Select army" styleClass="comboBox" stylesheets="@SelectArmies.css" visibleRowCount="6">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ComboBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox styleClass="boxBackground" stylesheets="@SelectArmies.css" GridPane.columnIndex="1">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="77.0" prefWidth="423.0" stylesheets="@SelectArmies.css">
+                     <children>
+                        <Label styleClass="titleHeader" stylesheets="@SelectArmies.css" text="Army two">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboBoxArmyTwo" prefWidth="150.0" promptText="Select army" styleClass="comboBox" stylesheets="@SelectArmies.css" visibleRowCount="6" />
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="imageBannerTwo" fitHeight="76.67777777" fitWidth="76.67777" pickOnBounds="true" preserveRatio="true" styleClass="image-view" />
+               </children>
+            </HBox>
+            <HBox GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewArmyOne" prefHeight="294.0" prefWidth="250.0" stylesheets="@SelectArmies.css" />
+                  <ListView fx:id="listViewArmyOneUnitInfo" mouseTransparent="true" prefHeight="163.0" prefWidth="250.0" />
+               </children>
+            </HBox>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewArmyTwo" prefHeight="200.0" prefWidth="250.0" stylesheets="@SelectArmies.css" />
+                  <ListView fx:id="listViewArmyTwoUnitInfo" mouseTransparent="true" prefHeight="200.0" prefWidth="250.0" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" maxHeight="188.0" maxWidth="500.0" minHeight="182.0" minWidth="500.0" prefHeight="188.0" prefWidth="500.0" styleClass="boxBackground" stylesheets="@SelectArmies.css" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Select a terrain for the battle!" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <HBox alignment="CENTER" prefHeight="48.0" prefWidth="500.0">
+                     <children>
+                        <Button minHeight="30.0" minWidth="45.0" mnemonicParsing="false" onAction="#switchTerrainLeft" rotate="180.0" styleClass="arrowButton" stylesheets="@SelectArmies.css" />
+                         <Separator layoutX="10.0" layoutY="35.0" prefHeight="1.0" prefWidth="26.0" translateY="260.0" visible="false" />
+                         <Label fx:id="labelTerrainName" alignment="CENTER" minWidth="50.0" text="Terrain" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                         <Separator layoutX="10.0" layoutY="35.0" prefHeight="1.0" prefWidth="25.0" visible="false" />
+                        <Button minHeight="30.0" minWidth="45.0" mnemonicParsing="false" onAction="#switchTerrainRight" styleClass="arrowButton" stylesheets="@SelectArmies.css" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="listViewUnitStats" mouseTransparent="true" prefHeight="115.0" prefWidth="500.0" stylesheets="@SelectArmies.css" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxHeight="182.0" prefHeight="182.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fx:id="imageTerrain" fitHeight="182.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+             <VBox alignment="CENTER" maxHeight="182.0" prefHeight="182.0" prefWidth="500.0" GridPane.rowIndex="3">
+                 <children>
+                     <Button fx:id="buttonNewArmy" minHeight="60.66666666666" minWidth="500.0" onAction="#createNewArmy" text="Create new army!">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                 </children>
+             </VBox>
+             <VBox alignment="CENTER" maxHeight="182.0" prefHeight="182.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                 <children>
+                     <Button fx:id="buttonStartBattle" minHeight="60.66666666666" minWidth="500.0" onAction="#startBattle" text="Start Battle!">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                 </children>
+             </VBox>
+         </children>
+      </GridPane>
+      <Button layoutX="20.0" layoutY="72.0" minHeight="50.0" minWidth="60.0" mnemonicParsing="false" onAction="#backToHomePage" prefHeight="50.0" prefWidth="30.0" rotate="180.0" styleClass="arrowButton" stylesheets="@SelectArmies.css" />
+       <Circle fx:id="circleHelp" fill="DODGERBLUE" layoutX="1125.0" layoutY="97.0" radius="25.0" stroke="#0000003a" strokeType="INSIDE" style="-fx-fill: #7a94d0;">
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+       </Circle>
+       <Label fx:id="labelHelp" layoutX="310.0" layoutY="40.0" styleClass="helpLabel" stylesheets="ArmyCreator.css" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+       <Label layoutX="1119.0" layoutY="79.0" mouseTransparent="true" text="?" textFill="WHITE">
+           <font>
+               <Font size="25.0" />
+           </font>
+       </Label>
+   </children>
+</AnchorPane>
